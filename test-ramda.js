@@ -1,4 +1,6 @@
 var R = require('ramda');
+var p1 = require('./promise1.js');
+var p2 = require('./promise2.js');
 
 //experiment using R.prop()
 
@@ -36,16 +38,11 @@ console.log('f3=', f3);
  f3= 100
  */
 
-//experiment using R.compose();
-
-var f4 = R.compose(R.inc, R.negate, Math.pow);
-
-console.log(f4);
-
-console.log('f4(3,4)=',f4(3, 4));
-
+//experiment using R.composeP();
 //right-to-left function composition using promises
 
-// var followersForUser = R.composeP(db.getFollowers, db.getUserById);
+var f4 = R.composeP(p2, p1);
+console.log('f4()=');
+f4();
 
 
