@@ -1,0 +1,30 @@
+html, body {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+}
+
+form {
+    width: 50%;
+    margin: 50px auto;
+}
+
+input {
+    text-align: center;
+    width: 200px;
+    margin: 0 auto;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+p {
+    text-align: center;
+}
+
+#serverResponse {
+    color: red;
+}
