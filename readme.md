@@ -29,7 +29,7 @@ There are two promises `p1` and `p2`, each which resolve after a time delay. `p1
 
 ##Using Observables to call a mocked API
 
-As discussed during the phone interview, to reduce server and db load, we can use Observables to only make API calls using Observables. The PoC uses SocketIO and ExpressJS to create a real-time communication link between the client and server.
+As discussed during the phone interview, to reduce server and db load, we can use Observables to only make API calls using Observables. The Observable code can be found in the server.js file. The PoC uses SocketIO and ExpressJS to create a real-time communication link between the client and server.
 
 Every time the client detects a change in the input field on index.html, it sends the value of that input field to the server. The server measures the time since the last message it received using `process.hrtime()` and if that value is less than 0.3 seconds it does not call the API (the API is a mocked call in this example) but instead continues to wait. If the time is greater than 0.3 seconds, it makes a call to the API.
  
