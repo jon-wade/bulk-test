@@ -40,7 +40,7 @@ io.on('connection', function(socket){
     });
 });
 
-//start websever on port:3000
+//start web server on port:3000
 http.listen(3000, function(){
     console.log('app listening on port: 3000');
 });
