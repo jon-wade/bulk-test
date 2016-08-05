@@ -25,20 +25,6 @@ The fourth function `f4()` shows chaining Promises together with `R.composeP()`.
 
 `var f4 = R.composeP(p2, p1);`
 
-`/*promise1.js*/
- module.exports = function() {
-     return new Promise(function(resolve) {
-         setTimeout(function() {console.log('Promise1 returning after 2 seconds...'); resolve();}, 2000);
-     });
- };`
-
-`/*promise2.js*/
- module.exports = function() {
-     return new Promise(function(resolve) {
-         setTimeout(function() {console.log('Promise2 returning after a further 3 seconds...'); resolve();}, 3000);
-     });
- };`
-
 There are two promises `p1` and `p2`, each which resolve after a time delay. `p1` resolves after 2 seconds, `p2` after 3 seconds. `R.compose(p2, p1)` first calls Promise `p1`, waits for it to resolve and then immediately calls `p2`, working from right to left. In this way we can create complex asynchronous calls in a synchronous way in one easy to read function. 
 
 ##Using Observables to call a mocked API
